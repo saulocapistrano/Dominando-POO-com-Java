@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="backendpoo.Carro"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="model.ContaBancaria"/>
+    <fullyQualifiedTypeName name="model.ContaPoupanca"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="utils.DataUtil"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="model.Movimentacao"/>
+    <fullyQualifiedTypeName name="model.Cliente"/>
+    <fullyQualifiedTypeName name="model.Recepcionista"/>
+    <fullyQualifiedTypeName name="interfaces.ICliente"/>
+    <fullyQualifiedTypeName name="interfaces.IGerente"/>
+    <fullyQualifiedTypeName name="interfaces.ICamareira"/>
+    <fullyQualifiedTypeName name="interfaces.IRecepcionista"/>
+    <fullyQualifiedTypeName name="model.Camareira"/>
+    <fullyQualifiedTypeName name="model.Gerente"/>
+    <fullyQualifiedTypeName name="model.Quarto"/>
+    <fullyQualifiedTypeName name="enums.EnumTipoQuarto"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

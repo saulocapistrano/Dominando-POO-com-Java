@@ -1,0 +1,106 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.InputMismatchException;
+
+public abstract class ContaBancaria {
+
+	private String agencia;
+	private String conta;
+	private Integer digito;
+	private Double saldoInicial;
+	private Date dataAbertura;
+
+	private Double VALOR_MIN_DEPOSITO = 10.0;
+	private ArrayList<Movimentacao> movimentacoes;
+
+	public ContaBancaria() {
+		super();
+	}
+
+	public ContaBancaria(String agencia, String conta, Integer digito, Double saldoInicialInicial) {
+		super();
+		this.agencia = agencia;
+		this.conta = conta;
+		this.digito = digito;
+		this.saldoInicial = saldoInicialInicial;
+		this.dataAbertura = new Date();
+
+		// Se não instanciar, vai dar um exception de nullPoninterException
+		this.movimentacoes = new ArrayList<Movimentacao>();
+		Movimentacao movimentacao = new Movimentacao("Abertura de conta", saldoInicial);
+
+		// Aqui está sendo salvo a movimentação dentro do array de movimentações
+		// Aqui estou iniciando meu extrato bancário
+		this.movimentacoes.add(movimentacao);
+	}
+
+	public String getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(String agencia) {
+		this.agencia = agencia;
+	}
+
+	public String getConta() {
+		return conta;
+	}
+
+	public void setConta(String conta) {
+		this.conta = conta;
+	}
+
+	public Integer getDigito() {
+		return digito;
+	}
+
+	public void setDigito(Integer digito) {
+		this.digito = digito;
+	}
+
+	public Double getsaldoInicial() {
+		return saldoInicial;
+	}
+
+	public Date getDataAbertura() {
+		return dataAbertura;
+	}
+
+	public void depositar(Double valor) {
+		if (valor < VALOR_MIN_DEPOSITO) {
+			throw new InputMismatchException("O valor mínimo de depósito é R$" + VALOR_MIN_DEPOSITO);
+		}
+
+		this.saldoInicial = valor + this.saldoInicial;
+
+		// Aqui faço uma movimentação de depósito no extrato
+		Movimentacao movimentacao = new Movimentacao("Deposito", valor);
+		this.movimentacoes.add(movimentacao);
+	}
+
+	public Double sacar(Double valor) {
+		if (valor > this.saldoInicial) {
+			throw new InputMismatchException("saldoInicial insuficiente R$" + saldoInicial
+					+ " saque não permitido, insira um valor menor para saque.");
+		}
+
+		this.saldoInicial -= valor;
+
+		// Aqui faço uma movimentação de saque no extrato
+		Movimentacao movimentacao = new Movimentacao("Retirada de valor", valor);
+		this.movimentacoes.add(movimentacao);
+
+		return valor;
+	}
+
+	public void transferir(Double valor, ContaBancaria contaDestino) {
+		this.sacar(valor);
+		contaDestino.depositar(valor);
+		System.out.println("Transferência concluída com sucesso!");
+	}
+
+	public abstract void imprimirExtrato();
+
+}

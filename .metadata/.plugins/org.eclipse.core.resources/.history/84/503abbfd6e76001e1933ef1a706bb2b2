@@ -1,0 +1,15 @@
+package model;
+
+public class ContaPoupanca extends ContaBancaria{
+
+	public ContaPoupanca(String agencia, String conta, Integer digito, Double saldoInicial) {
+		super(agencia, conta, digito, saldoInicial);
+	}
+
+	@Override
+	public void imprimirExtrato() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

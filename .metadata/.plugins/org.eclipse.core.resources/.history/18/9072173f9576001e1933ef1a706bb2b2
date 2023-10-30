@@ -1,0 +1,52 @@
+import enums.EnumTipoQuarto;
+import model.Camareira;
+import model.Cliente;
+import model.Gerente;
+import model.Quarto;
+import model.Recepcionista;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		System.out.println("Hotel Java");
+		System.out.println();
+
+	
+		Cliente cli1 = new Cliente("MAnoel da Silva", "4324323442323", "123456789");
+		System.out.print("O "+cli1.getNome()+" está ");
+		cli1.alugarQuarto();
+		cli1.pedirLanche();
+		
+		Recepcionista rep1 = new Recepcionista("Valéria", "85666442255", "123546987");
+		System.out.print("A "+rep1.getNome()+" está ");
+		rep1.saberAtenderTelefone();
+		System.out.print("A "+rep1.getNome()+" está ");
+		rep1.falarInglês();
+		
+		Camareira cam1 = new Camareira("Francisca", "8577779966", "33366655587");
+		System.out.print("A "+cam1.getNome()+" está ");
+		cam1.arrumarACama();
+		
+		System.out.print("A "+cam1.getNome()+" está ");
+		cam1.arrumarQuarto();
+		
+		Gerente gerenteTurnoA = new Gerente("Marcelo", "552233669977", "22255566933");
+		System.out.print("O "+gerenteTurnoA.getNome()+" está ");
+		gerenteTurnoA.gerenciarDepartamentos();
+		System.out.print("O "+gerenteTurnoA.getNome()+" está ");
+		gerenteTurnoA.gerenciarFinancas();
+		System.out.print("O "+gerenteTurnoA.getNome()+" está ");
+		gerenteTurnoA.prepararHotelParaEvento();
+		
+		Quarto quarto1 = new Quarto("306A", 2000.0, EnumTipoQuarto.PRESIDENCIAL);
+		System.out.println("O quarto reservado é:  "+quarto1);		
+		
+		
+		
+		
+		
+	
+	}
+
+}

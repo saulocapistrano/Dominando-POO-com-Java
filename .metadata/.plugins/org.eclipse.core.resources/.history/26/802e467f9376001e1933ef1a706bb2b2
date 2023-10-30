@@ -1,0 +1,11 @@
+package enums;
+
+public enum EnumTipoQuarto {
+	BASICO(0, "Básico"),
+	MASTER(1, "Master"),
+	PRESIDENCIAL(2,"Suíte Presidencial");
+
+	EnumTipoQuarto(int i, String string) {
+	}
+	
+}

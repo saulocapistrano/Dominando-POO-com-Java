@@ -1,0 +1,21 @@
+package src;
+
+import model.ContaBancaria;
+
+public class App {
+
+	public static void main(String[] args) {
+		System.out.println("Criando nosso banco digital");
+		System.out.println("------------------------------");
+		
+		ContaBancaria conta = new ContaBancaria("0001", "7542", 5, 100.0);
+		System.out.println(conta.getSaldo());
+		System.out.println("------------------------------");		
+		conta.depositar(150.0);
+		System.out.println(conta.getSaldo());
+		System.out.println("------------------------------");
+		conta.sacar(300.0);
+		System.out.println(conta.getSaldo());
+
+	}
+}

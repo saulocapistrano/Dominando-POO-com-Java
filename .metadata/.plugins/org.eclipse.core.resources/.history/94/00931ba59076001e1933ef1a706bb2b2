@@ -1,0 +1,79 @@
+package model;
+
+import interfaces.ICamareira;
+import interfaces.IGerente;
+import interfaces.IRecepcionista;
+
+public class Gerente extends Pessoa implements IGerente, ICamareira, IRecepcionista {
+
+	public Gerente(String nome, String telefone, String cpf) {
+		super(nome, telefone, cpf);
+	}
+
+	@Override
+	public void encerrarContaDoCliente() {
+		System.out.println("Gerente atendendo a pedido de encerramento de conta do cliente.");
+	}
+
+	@Override
+	public void gerenciarDepartamentos() {
+		System.out.println("Gerente gerecnciando departamento.");
+	}
+
+	@Override
+	public void supervisionarFornecedores() {
+		System.out.println("Gerente supervisionando fornecedores.");
+	}
+
+	@Override
+	public void prepararHotelParaEvento() {
+		System.out.println("Gerente preparando o hotel para um evento.");
+	}
+
+	@Override
+	public void recificar() {
+		System.out.println("Gerente precificando os produtos e serviços do hotel;");
+	}
+
+	@Override
+	public void gerenciarFinancas() {
+		System.out.println("Gerente gerenciando as finanças.");
+	}
+
+	@Override
+	public void saberAtenderTelefone() {
+		System.out.println("Gerente atendendo o telefone no lugar da recepcionista.");
+	}
+
+	@Override
+	public void falarInglês() {
+		System.out.println("Gerente falando inglês com algum cliente.");
+	}
+
+	@Override
+	public void falarEspanhol() {
+		System.out.println("Gerente falando espanhol com algum cliente.");
+	}
+
+	@Override
+	public void falarItaliano() {
+		System.out.println("Gerente falando italiano com algum cliente.");
+	}
+
+	@Override
+	public void falarMandarin() {
+		System.out.println("Gerente falando mandarim com algum cliente.");
+	}
+
+	@Override
+	public void arrumarACama() {
+		System.out.println("Gerente arrumando a cama no lugar da camareira.");
+
+	}
+
+	@Override
+	public void arrumarQuarto() {
+		System.out.println("Gerente arrumando o quarto no lugar da camareira.");
+	}
+
+}

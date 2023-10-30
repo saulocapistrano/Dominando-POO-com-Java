@@ -1,0 +1,23 @@
+package backendpoo;
+public class App {
+
+	public static void main(String[] args) {
+
+		System.out.println("Aprendendo poo com Java.");
+		// Estou instanciando uma classe, construindo um objeto.
+		Pessoa pessoa1 = new Pessoa();
+		pessoa1.setNome(" Saulo José Neco Capistrano");
+		pessoa1.setIdade(40);
+		
+		System.out.println("O nome é: "+pessoa1.getNome()+ " a sua idade é: "+pessoa1.getIdade());
+		
+		
+		Carro carro1 = new Carro();
+		carro1.setAno("2023");
+		carro1.setModelo("Civic");
+		carro1.setCor("Branco");
+			
+		
+	}
+
+}

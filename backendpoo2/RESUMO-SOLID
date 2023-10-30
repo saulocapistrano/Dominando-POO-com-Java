@@ -1,0 +1,8 @@
+O que é SOLID?
+
+SOLID é um acrônimo de cinco princípios da OO. 
+S - Single Responsablity Principle : Princípio de Responsabilidade única, isso significa que uma classe deve ter uma única responsabilidade.
+O - Open-Closed Principle : Princípio do Aberto e Fechado, não se deve alterar algo que está em funcionamento;
+L - Liskov Substitution Plinciple : Princípio de substituição de Liskov, implica que uma classe substituita pode ser substituído pelo tipo base.
+I - Interface Segregation Principle : Princípio de Segregação da Interface : Uma classe não deve ser forçada a inmplementar métodos que ela nao vai implementar.
+D - Dependency Inversion Principle : Princípio da Inverção de Dependência, diz que tudo que depende dentro de uma classe 

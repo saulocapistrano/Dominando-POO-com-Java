@@ -1,0 +1,37 @@
+package model;
+
+import interfaces.ICliente;
+
+public class Cliente extends Pessoa implements ICliente{
+
+	private Integer idade;
+	public Cliente(String nome, String telefone, String cpf) {
+		super(nome, telefone, cpf);
+	}
+
+	@Override
+	public void alugarQuarto() {
+		System.out.println("Alugando um quato.");
+	}
+
+	@Override
+	public void pedirAlmoço() {
+		System.out.println("Pedindo almoço.");
+	}
+
+	@Override
+	public void pedirLanche() {
+		System.out.println("Pedindo lanche.");
+	}
+
+	@Override
+	public void pedirJanta() {
+		System.out.println("Pedidno o jantar.");
+	}
+
+	@Override
+	public void encerrarEstadia() {
+		System.out.println("Encerrando a estadia.");
+	}
+
+}

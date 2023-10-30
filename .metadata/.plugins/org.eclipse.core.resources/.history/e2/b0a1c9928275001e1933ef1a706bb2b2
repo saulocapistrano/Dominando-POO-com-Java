@@ -1,0 +1,9 @@
+package model;
+
+public class ContaBancaria {
+
+	private String agencia;
+	private String conta;
+	private Integer digito;
+	private Double saldo;
+}

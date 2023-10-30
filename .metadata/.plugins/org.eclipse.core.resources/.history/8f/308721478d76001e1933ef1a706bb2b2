@@ -1,0 +1,21 @@
+import model.Cliente;
+import model.Recepcionista;
+
+public class App {
+
+	public static void main(String[] args) {
+
+		System.out.println("Hotel Java");
+		System.out.println();
+
+	
+		Cliente cli1 = new Cliente("MAnoel da Silva", "4324323442323", "123456789");
+		
+		Recepcionista rep1 = new Recepcionista("Valéria", "85666442255", "123546987");
+		rep1.saberAtenderTelefone();
+		rep1.falarInglês();
+		
+	
+	}
+
+}

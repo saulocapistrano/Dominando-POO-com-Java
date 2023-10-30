@@ -1,0 +1,41 @@
+package model;
+
+import interfaces.IRecepcionista;
+
+public class Recepcionista extends Pessoa  implements IRecepcionista {
+
+	public Recepcionista(String nome, String telefone, String cpf) {
+		super(nome, telefone, cpf);
+	}
+
+	@Override
+	public void saberAtenderTelefone() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void falarInglês() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void falarEspanhol() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void falarItaliano() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void falarMandarin() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,61 @@
+package src;
+
+import model.ContaCorrente;
+import model.ContaPoupanca;
+import model.Movimentacao;
+import utils.DataUtil;
+
+public class App {
+
+	public static void main(String[] args) {
+		System.out.println("Criando nosso banco digital");
+		System.out.println("------------------------------");
+
+		ContaCorrente conta = new ContaCorrente("0001", "7542", 5, 100.0);
+		System.out.println("saldoInicial inicial de R$" + conta.getsaldoInicial());
+		System.out.println("------------------------------");
+
+		System.out.print("Deposito efetudao de R$");
+		conta.depositar(250.0);
+		System.out.println(conta.getsaldoInicial());
+		System.out.println("------------------------------");
+
+		var saque = conta.sacar(150.0);
+		System.out.println("Saque efetudao de R$" + saque);
+		System.out.println("------------------------------");
+
+		System.out.println("saldoInicial após o saque " + conta.getsaldoInicial());
+		System.out.println("------------------------------");
+
+		ContaPoupanca conta2 = new ContaPoupanca("0001", "7542", 6, 200.0);
+		System.out.println("saldoInicial inicial de R$" + conta.getsaldoInicial());
+		System.out.println("------------------------------");
+
+		conta2.transferir(100.0, conta);
+		System.out.println("saldoInicial da conta origem " + conta2.getsaldoInicial());
+		System.out.println("------------------------------");
+
+		System.out.println("saldoInicial da conta destino " + conta.getsaldoInicial());
+
+		// System.out.println(conta2.getDataAbertura());
+
+		// DataUtil dataUtil = new DataUtil();
+		var f1 = DataUtil.converterDateParaDataEHora(conta2.getDataAbertura());
+		var f2 = DataUtil.converterDateParaData(conta2.getDataAbertura());
+		var f3 = DataUtil.converterHora(conta2.getDataAbertura());
+
+		System.out.println(f1);
+		System.out.println(f2);
+		System.out.println(f3);
+
+		// Extrato bancário é composto por movimentações bancárias
+		// Deve ter valor que possa ser movimentado
+		// Deve ter uma lista de movimentações
+//		
+//		Movimentacao movimentacao  = new Movimentacao("Saque", 100.0);
+//		System.out.println(movimentacao.toString());
+
+		conta.imprimirExtrato();
+		conta2.imprimirExtrato();
+	}
+}

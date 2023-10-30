@@ -1,0 +1,90 @@
+package model;
+
+import interfaces.ICamareira;
+import interfaces.IGerente;
+import interfaces.IRecepcionista;
+
+public class Gerente extends Pessoa implements IGerente, ICamareira, IRecepcionista{
+
+	public Gerente(String nome, String telefone, String cpf) {
+		super(nome, telefone, cpf);
+	}
+
+	@Override
+	public void encerrarContaDoCliente() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void gerenciarDepartamentos() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void supervisionarFornecedores() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void prepararHotelParaEvento() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void recificar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void gerenciarFinancas() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void saberAtenderTelefone() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void falarInglês() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void falarEspanhol() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void falarItaliano() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void falarMandarin() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void arrumarACama() {
+	System.out.println("Gerente arrumando a cama no lugar da camareira.");
+		
+	}
+
+	@Override
+	public void arrumarQuarto() {
+		System.out.println("Gerente arrumando o quarto no lugar da camareira.");
+	}
+
+}

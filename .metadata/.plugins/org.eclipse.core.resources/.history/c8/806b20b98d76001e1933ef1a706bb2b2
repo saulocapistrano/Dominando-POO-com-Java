@@ -1,0 +1,41 @@
+package model;
+
+import interfaces.ICliente;
+
+public class Cliente extends Pessoa implements ICliente{
+
+	public Cliente(String nome, String telefone, String cpf) {
+		super(nome, telefone, cpf);
+	}
+
+	@Override
+	public void alugarQuarto() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void pedirAlmoço() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void pedirLanche() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void pedirJanta() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void encerrarEstadia() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

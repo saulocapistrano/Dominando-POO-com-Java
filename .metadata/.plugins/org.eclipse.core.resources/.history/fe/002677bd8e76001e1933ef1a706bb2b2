@@ -1,0 +1,47 @@
+package model;
+
+import interfaces.IGerente;
+
+public class Gerente extends Pessoa implements IGerente{
+
+	public Gerente(String nome, String telefone, String cpf) {
+		super(nome, telefone, cpf);
+	}
+
+	@Override
+	public void encerrarContaDoCliente() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void gerenciarDepartamentos() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void supervisionarFornecedores() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void prepararHotelParaEvento() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void recificar() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void gerenciarFinancas() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

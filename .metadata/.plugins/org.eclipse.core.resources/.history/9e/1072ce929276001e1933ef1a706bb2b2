@@ -1,0 +1,8 @@
+package model;
+
+public class Quarto {
+
+	private String numero;
+	private Double valor;
+	private String tipo;
+}

@@ -1,0 +1,11 @@
+package backendpoo;
+
+public class Pessoa {
+
+	private String nome;
+	private Integer idade;
+	
+	public void getNome(String nome) {
+		this.nome = nome;
+	}
+}
